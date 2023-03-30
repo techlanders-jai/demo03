@@ -4,10 +4,10 @@ jobs:
   password:
     runs-on: ubuntu-latest
     outputs:
-      build_id: ${{ steps.password_step.outputs.password }}
+      build_id: ${{ steps.password.outputs.password }}
     steps:
-      - name: Password
-        id: password_step
+      - name: password
+        id: password
         run: echo "password=1111111111111111111" >> $GITHUB_OUTPUT
   hello:
     needs: password
